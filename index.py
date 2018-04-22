@@ -39,7 +39,7 @@ def get_secret():
 
 def handler(event, context):
     data = {
-        'output': get_secret(),
+        'output': 'hello world?',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
