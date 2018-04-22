@@ -38,7 +38,7 @@ def get_secret():
         return secret 
 
 def get_text():
-    return "HELLO AGAIN"
+    print("HELLO AGAIN")
         
 def handler(event, context):
     data = {
