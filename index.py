@@ -35,11 +35,11 @@ def get_secret():
         else:
             binary_secret_data = get_secret_value_response['SecretBinary']
             
-        # Your code goes here. 
+        return secret 
 
 def handler(event, context):
     data = {
-        'output': 'hello world?',
+        'output': get_secret(),
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
