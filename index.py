@@ -37,9 +37,12 @@ def get_secret():
             
         return secret 
 
+def get_text():
+    return "HELLO AGAIN"
+        
 def handler(event, context):
     data = {
-        'output': get_secret(),
+        'output': get_text(),
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
